@@ -9,7 +9,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': {
-        target: 'http://localhost:4000',
+        target: 'https://task-snowy-chi.vercel.app',
         changeOrigin: true
       }
     }
