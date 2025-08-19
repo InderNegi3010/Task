@@ -18,14 +18,21 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: "*",
+    origin: ["https://task-wyjf.vercel.app", "http://localhost:4000"], // Add your frontend URL
+    credentials: true
   },
 });
+
+// Also update the Express CORS
+app.use(cors({
+  origin: ["https://task-wyjf.vercel.app", "http://localhost:4000"],
+  credentials: true
+}));
 
 app.set("io", io);
 
 app.use(express.json());
-app.use(cors());
+
 
 // Routes
 app.use("/api/users", userRouter);

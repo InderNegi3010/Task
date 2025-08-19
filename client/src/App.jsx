@@ -4,7 +4,7 @@ import Header from './components/Header'
 import Leaderboard from './components/Leaderboard'
 import AddUserModal from './components/AddUserModal'
 
-const API_BASE = 'https://task-snowy-chi.vercel.app'
+const API_BASE = 'https://task-snowy-chi.vercel.app/api'
 
 function App() {
   const [users, setUsers] = useState([])
