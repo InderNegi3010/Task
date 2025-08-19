@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .card-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .rank-badge {
+    @apply inline-flex items-center justify-center w-8 h-8 rounded-full text-white font-bold text-sm;
+  }
+  
+  .rank-1 {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+  }
+  
+  .rank-2 {
+    background: linear-gradient(135deg, #C0C0C0, #A8A8A8);
+  }
+  
+  .rank-3 {
+    background: linear-gradient(135deg, #CD7F32, #B8860B);
+  }
+  
+  .rank-other {
+    @apply bg-gray-500;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
