@@ -4,7 +4,7 @@ import Header from './components/Header'
 import Leaderboard from './components/Leaderboard'
 import AddUserModal from './components/AddUserModal'
 
-const API_BASE = 'http://localhost:4000/api'
+const API_BASE = 'https://task-snowy-chi.vercel.app'
 
 function App() {
   const [users, setUsers] = useState([])
@@ -16,7 +16,7 @@ function App() {
 
   // Initialize socket connection
   useEffect(() => {
-    const socketInstance = io('http://localhost:4000')
+    const socketInstance = io('https://task-snowy-chi.vercel.app')
     setSocket(socketInstance)
 
     socketInstance.on('connect', () => {
